@@ -1,11 +1,10 @@
-// App.jsx
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./pages/login";
-// import Dashboard from "./components/Dashboard";
 import Navbar from "./components/navbar";
 import Blog from "./components/blog";
 import Home from "./pages/home";
 import AddBlog from "./components/addBlog";
+import EditBlog from "./components/editBlog";
 
 function App() {
   return (
@@ -19,8 +18,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/dashboard" exact element={<Home />} />
-          <Route path="/blog" exact element={<Blog />} />
-          <Route path="/add" exact element={<AddBlog />} />
+          <Route path="/blogs" exact element={<Blog />} />
+          <Route path="/addBlogs" exact element={<AddBlog />} />
+          <Route path="/edit/:id" exact element={<EditBlog />} />
         </Routes>
       </Router>
     </>

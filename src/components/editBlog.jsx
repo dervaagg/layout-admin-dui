@@ -1,18 +1,30 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 // import React from "react";
 
-const AddBlog = () => {
+const EditBlog = () => {
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
   const navigate = useNavigate();
+  const { id } = useParams();
 
-  const saveBlog = async (e) => {
+  useEffect(() => {
+    const getBlogById = async () => {
+      const response = await axios.get(`http://localhost:4001/blog/${id}`);
+      setImage(response.data.image);
+      setTitle(response.data.title);
+      setCategory(response.data.category);
+      setContent(response.data.content);
+    };
+    getBlogById();
+  }, [id]);
+
+  const updateBlog = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4001/blog", {
+    await axios.patch(`http://localhost:4001/blog/${id}`, {
       image: image,
       title: title,
       category: category,
@@ -23,14 +35,14 @@ const AddBlog = () => {
 
   return (
     <div className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow shadow-slate-300">
-      <form onSubmit={saveBlog} className="my-9">
+      <form onSubmit={updateBlog} className="my-10">
         <div className="flex flex-col">
           <div className="mb-5">
             <label className="font-bold text-slate-700">Image</label>
             <input
               type="text"
               className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
-              placeholder="Upload News Headline"
+              placeholder="Blog Name"
               value={image}
               onChange={(e) => setImage(e.target.value)}
             />
@@ -40,7 +52,7 @@ const AddBlog = () => {
             <input
               type="text"
               className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
-              placeholder="News Title"
+              placeholder="Blog Name"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
@@ -50,7 +62,7 @@ const AddBlog = () => {
             <input
               type="text"
               className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
-              placeholder="News Category"
+              placeholder="Blog Name"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             />
@@ -60,7 +72,7 @@ const AddBlog = () => {
             <input
               type="text"
               className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
-              placeholder="News Content"
+              placeholder="Blog Name"
               value={content}
               onChange={(e) => setContent(e.target.value)}
             />
@@ -69,7 +81,7 @@ const AddBlog = () => {
             type="submit"
             className="w-full py-3 font-bold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow"
           >
-            Add
+            Update
           </button>
         </div>
       </form>
@@ -77,4 +89,4 @@ const AddBlog = () => {
   );
 };
 
-export default AddBlog;
+export default EditBlog;

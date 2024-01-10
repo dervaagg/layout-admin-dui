@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const Navbar = () => {
-
   const Logout = async () => {
     try {
       await axios.delete("http://localhost:4001/logout");
@@ -24,7 +23,7 @@ const Navbar = () => {
             href="https://transformation.waskita.co.id/"
           >
             <img
-              src="../../public/Waskita_Karya.svg.png"
+              src="./public/img/logo-wk.png"
               width="80"
               height="100"
               alt="Logo"

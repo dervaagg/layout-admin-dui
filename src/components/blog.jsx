@@ -1,8 +1,6 @@
-// import React from 'react'
 import { Link } from "react-router-dom";
 import axios from "axios";
 import useSWR, { useSWRConfig } from "swr";
-// import React from "react";
 
 const Blog = () => {
   const { mutate } = useSWRConfig();
@@ -18,14 +16,14 @@ const Blog = () => {
 
   const deleteBlog = async (blogId) => {
     await axios.delete(`http://localhost:4001/blog/${blogId}`);
-    mutate('blogs');
-  }  
+    mutate("blogs");
+  };
 
   return (
     <div className="flex flex-col mt-5">
       <div className="w-full">
         <Link
-          to={`/add`}
+          to={`/addBlogs`}
           className="bg-green-500 hover:bg-green-700 border border-slate-200 text-white font-bold py-2 px-4 rounded-lg"
         >
           Add Blog
@@ -50,7 +48,7 @@ const Blog = () => {
                   <td className="py-3 px-6 font-medium text-gray-900">
                     {blog.title}
                   </td>
-                  <td className="py-3 px-6">Malware & Threats</td>
+                  <td className="py-3 px-6">{blog.category}</td>
                   <td className="py-3 px-6">{blog.content}</td>
                   <td className="py-3 px-6 text-center">
                     <Link
@@ -59,7 +57,10 @@ const Blog = () => {
                     >
                       Edit
                     </Link>
-                    <button onClick={() => deleteBlog(blog.id)} className="font-medium bg-red-400 hover:bg-red-500 px-3 py-1 rounded text-white">
+                    <button
+                      onClick={() => deleteBlog(blog.id)}
+                      className="font-medium bg-red-400 hover:bg-red-500 px-3 py-1 rounded text-white"
+                    >
                       Delete
                     </button>
                   </td>
