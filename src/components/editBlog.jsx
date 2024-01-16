@@ -30,7 +30,7 @@ const EditBlog = () => {
       category: category,
       content: content,
     });
-    navigate("/blogs");
+    navigate("/");
   };
 
   return (

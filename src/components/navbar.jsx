@@ -22,12 +22,7 @@ const Navbar = () => {
             className="navbar-item"
             href="https://transformation.waskita.co.id/"
           >
-            <img
-              src="./public/img/logo-wk.png"
-              width="80"
-              height="100"
-              alt="Logo"
-            />
+            <img src="./public/img/wk.png" width="60rem" alt="Logo" />
           </a>
 
           <a

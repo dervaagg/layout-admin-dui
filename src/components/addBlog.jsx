@@ -18,7 +18,7 @@ const AddBlog = () => {
       category: category,
       content: content,
     });
-    navigate("/blogs");
+    navigate("/");
   };
 
   return (
