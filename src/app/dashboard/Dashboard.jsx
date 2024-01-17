@@ -1,4 +1,4 @@
-import video from "../assets/video/wkvideo.mp4";
+import video from "../../assets/video/wkvideo.mp4";
 
 const Dashboard = () => {
   // const [name, setName] = useState("");

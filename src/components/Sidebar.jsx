@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import Blog from "./Blog";
 // import LandingPage from "./LandingPage";
-import Dashboard from "./Dashboard";
+import Dashboard from "../app/dashboard/Dashboard";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
