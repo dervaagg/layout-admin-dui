@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 2);
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.outline-sidebar {
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}

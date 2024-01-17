@@ -20,8 +20,8 @@ const Blog = () => {
   };
 
   return (
-    <div className="flex justify-center mt-5 sm:ml-64">
-      <div className="">
+    <div className="flex justify-center mt-5">
+      <div className="w-full">
         <Link
           to={`/addBlogs`}
           className="bg-green-500 hover:bg-green-700 border border-slate-200 text-white font-bold py-2 px-4 rounded-lg"
@@ -43,14 +43,16 @@ const Blog = () => {
             <tbody>
               {data.map((blog, index) => (
                 <tr className="bg-white border-b" key={blog.id}>
-                  <td className="py-3 px-1 text-center">{index + 1}</td>
-                  <td className="py-3 px-6">{blog.image}</td>
-                  <td className="py-3 px-6 font-medium text-gray-900">
+                  <td className="text-wrap py-3 px-1 text-center">
+                    {index + 1}
+                  </td>
+                  <td className="text-wrap py-3 px-6">{blog.image}</td>
+                  <td className="truncate py-3 px-6 font-medium text-gray-900">
                     {blog.title}
                   </td>
-                  <td className="py-3 px-6">{blog.category}</td>
-                  <td className="py-3 px-6">{blog.content}</td>
-                  <td className="py-3 px-6 text-center">
+                  <td className="text-wrap py-3 px-6">{blog.category}</td>
+                  <td className="text-wrap py-3 px-6">{blog.content}</td>
+                  <td className="text-wrap py-3 px-6 text-center">
                     <Link
                       to={`/edit/${blog.id}`}
                       className="font-medium bg-blue-400 hover:bg-blue-500 px-3 py-1 rounded text-white mr-1"

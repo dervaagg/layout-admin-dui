@@ -2,7 +2,7 @@
 // import axios from "axios";
 // import jwtDecoded from "jwt-decode";
 
-const Dashboard = () => {
+const LandingPage = () => {
   // const [name, setName] = useState("");
   // const [token, setToken] = useState("");
   // const [expireToken, setExpireToken] = useState("")
@@ -65,4 +65,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default LandingPage;

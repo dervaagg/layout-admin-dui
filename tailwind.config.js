@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode: "jit",
   content: [
-    "./src/components/blog.jsx",
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
-    }
+    extend: {
+      colors: {
+        "dark-purple": "#081A51",
+        "light-white": "rgba(255,255,255,0.17)",
+      },
+    },
   },
   plugins: [
 
