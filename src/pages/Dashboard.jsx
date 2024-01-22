@@ -9,15 +9,15 @@ const Dashboard = () => {
         {/* HEADER */}
         <Box
           display="flex"
-          justifyContent="space-between"
-          alignItems="center"
+          justifyContent="flex-start"
+          alignItems="stretch"
         />
         <Header
           title="HI, ADMIN!"
           subtitle="WELCOME TO CSIRT WASKITA ADMIN'S DASHBOARD"
         />
           <video
-            className="fixed bottom-1 top-0 left-0 w-full h-full object-cover z-[-1]"
+            className="fixed bottom-1 top-0 left-12 w-full h-full object-cover z-[-1]"
             src={video}
             autoPlay
             loop

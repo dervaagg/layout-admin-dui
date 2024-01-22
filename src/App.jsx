@@ -1,11 +1,24 @@
-import { Bar, Calendars, Contacts, Dashboard, FAQ, Geography, InputForm, Invoices, Line, Pie, SidebarMenu, Team, Topbar } from './pages';
+import {
+  Bar,
+  Calendars,
+  Contacts,
+  Dashboard,
+  FAQ,
+  Geography,
+  InputForm,
+  Invoices,
+  Line,
+  Pie,
+  SidebarMenu,
+  Team,
+  Topbar,
+} from "./pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CssBaseline, ThemeProvider } from '@mui/material'; // reset all default css
-import { ColorModeContext, useMode } from './styles/theme';
-
+import { CssBaseline, ThemeProvider } from "@mui/material"; // reset all default css
+import { ColorModeContext, useMode } from "./styles/theme";
+import NewsList from "./pages/csirt/NewsList";
 
 const App = () => {
-
   const [theme, coloMode] = useMode();
 
   return (
@@ -16,7 +29,6 @@ const App = () => {
 
         <BrowserRouter>
           <main className="app">
-
             <SidebarMenu />
 
             <section className="content">
@@ -25,6 +37,8 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
 
+                <Route path="/news" element={<NewsList />} />
+
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
@@ -32,20 +46,18 @@ const App = () => {
                 <Route path="/form" element={<InputForm />} />
                 <Route path="/calendar" element={<Calendars />} />
                 <Route path="/faq" element={<FAQ />} />
-                
+
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/line" element={<Line />} />
                 <Route path="/geography" element={<Geography />} />
               </Routes>
-
             </section>
-
           </main>
         </BrowserRouter>
       </ThemeProvider>
     </ColorModeContext.Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

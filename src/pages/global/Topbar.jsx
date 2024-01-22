@@ -1,26 +1,23 @@
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+// import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+// import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+// import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+// import SearchIcon from "@mui/icons-material/Search";
+// import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import SearchIcon from "@mui/icons-material/Search";
-import InputBase from "@mui/material/InputBase";
 import { ColorModeContext, tokens } from "../../styles/theme";
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 
-
 const Topbar = () => {
-
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
-
+    <Box display="flex" justifyContent="flex-end" p={2}>
       {/* 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 SEARCH BAR 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 */}
-      <Box
+      {/* <Box
         display="flex"
         borderRadius="3px"
         backgroundColor={colors.primary[400]}
@@ -30,12 +27,14 @@ const Topbar = () => {
         <IconButton type="button" sx={{ p: 1 }}>
           <SearchIcon />
         </IconButton>
-      </Box>
-
+      </Box> */}
 
       {/* 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 ICONS 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 */}
-      <Box display="flex">
-
+      <Box
+        display="flex"
+        borderRadius="3px"
+        backgroundColor={colors.primary[400]}
+      >
         <IconButton onClick={colorMode.toggleColorMode}>
           {
             // by user click toggle UI theme color...
@@ -46,7 +45,7 @@ const Topbar = () => {
             )
           }
         </IconButton>
-
+        {/* 
         <IconButton>
           <NotificationsOutlinedIcon />
         </IconButton>
@@ -57,12 +56,10 @@ const Topbar = () => {
 
         <IconButton>
           <PersonOutlinedIcon />
-        </IconButton>
-
+        </IconButton> */}
       </Box>
-
     </Box>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;
