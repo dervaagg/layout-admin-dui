@@ -1,81 +1,57 @@
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 export const sidebarMenu = [
     {
-        title: 'Dashboard',
+        title: "Dashboard",
         icon: HomeOutlinedIcon,
-        path: '/',
+        path: "/",
     },
     {
-        title: 'Info',
-        tag: 'divider'
+        title: "Informasi",
+        tag: "divider",
     },
     {
-        title: 'Manage Team',
+        title: "Profil",
         icon: PeopleOutlinedIcon,
-        path: '/team',
+        path: "/team",
     },
     {
-        title: 'Contacts Information',
+        title: "Kontak",
         icon: ContactsOutlinedIcon,
-        path: '/contacts',
+        path: "/contacts",
     },
     {
-        title: 'Invoices Balances',
+        title: "Layanan",
         icon: ReceiptOutlinedIcon,
-        path: '/invoices',
+        path: "/invoices",
     },
     {
-        title: 'Inputs',
-        tag: 'divider'
+        title: "Berita",
+        tag: "divider",
     },
     {
-        title: 'Profile Form',
+        title: "Edit Berita",
         icon: PersonOutlinedIcon,
-        path: '/form',
+        path: "/form",
     },
     {
-        title: 'Calendar',
-        icon: CalendarTodayOutlinedIcon,
-        path: '/calendar',
+        title: "Dokumen Area",
+        tag: "divider",
     },
     {
-        title: 'FAQ Page',
-        icon: HelpOutlineOutlinedIcon,
-        path: '/faq',
-    },
-    {
-        title: 'Charts',
-        tag: 'divider'
-    },
-    {
-        title: 'Bar Chart',
+        title: "RFC 2350",
         icon: BarChartOutlinedIcon,
-        path: '/bar',
+        path: "/bar",
     },
     {
-        title: 'Pie Chart',
+        title: "Panduan",
         icon: PieChartOutlineOutlinedIcon,
-        path: '/pie',
+        path: "/pie",
     },
-    {
-        title: 'Line Chart',
-        icon: TimelineOutlinedIcon,
-        path: '/line',
-    },
-    {
-        title: 'Geography Chart',
-        icon: MapOutlinedIcon,
-        path: '/geography',
-    },
-]
+];
