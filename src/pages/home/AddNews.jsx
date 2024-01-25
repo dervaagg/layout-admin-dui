@@ -28,14 +28,14 @@ const AddNews = () => {
     formData.append("date", date);
     formData.append("image", file);
     try {
-         await axios.post("http://localhost:4001/news", formData,{
-            headers: {
-                "Content-Type": "multipart/form-data",
-            },
-         });
-         navigate("/news");
+      await axios.post("http://localhost:4001/news", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      navigate("/news");
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
   };
 
@@ -141,9 +141,9 @@ const AddNews = () => {
           </div>
           <div className="field">
             <div className="control">
-                <button type="submit" className="button is-success">
-                    Submit
-                </button>
+              <button type="submit" className="button is-success">
+                Submit
+              </button>
             </div>
           </div>
         </form>

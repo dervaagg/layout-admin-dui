@@ -1,4 +1,4 @@
-import video from "../../assets/video/wkvideo.mp4";
+import video from "../assets/video/wkvideo.mp4";
 
 const Dashboard = () => {
   // const [name, setName] = useState("");
@@ -63,25 +63,17 @@ const Dashboard = () => {
           loop
           muted
         />
-        <div className="top-10 container mb-2 mt-[-1rem] p-6 max-w-[60rem]">
+        <div className="top-10 container mb-2 mt-[-1rem] p-6 max-w-[60rem]  hero-home">
           <h2 className="text-neutral-300 font-sans subpixel-antialiased tracking-wide text-2xl font-semibold">
             HI, WELCOME!
           </h2>
-          <h1 className="text-neutral-300 font-sans subpixel-antialiased tracking-wide text-4xl font-bold mb-2">
-            ADMIN DASHBOARD{" "}
-            <a className="underline underline-offset-8 decoration-red-900/45">
-              CSIRT
-            </a>{" "}
-            <a className="underline underline-offset-8 decoration-red-900/45">
-              WASKITA
-            </a>
+          <h1 className="text-neutral-300 font-sans subpixel-antialiased tracking-wide text-4xl font-bold mb-2 drop-shadow-2xl">
+            DASHBOARD ADMIN CSIRT WSKT
           </h1>
-          <button className="mt-5 bg-neutral-300 hover:bg-neutral-700 hover:text-white border border-gray-600 hover:border-white font-bold py-2 px-4 rounded-lg">
-            Logout
-          </button>
         </div>
       </div>
     </div>
   );
 };
+
 export default Dashboard;
