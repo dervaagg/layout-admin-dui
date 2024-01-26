@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import 'bulma/css/bulma.min.css';
 
 const NewsList = () => {
   const [newses, setNewses] = useState([]);

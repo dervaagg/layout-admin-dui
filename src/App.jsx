@@ -11,6 +11,7 @@ import AddBlog from "./widgets/AddBlog";
 import EditBlog from "./widgets/EditBlog";
 import NewsList from "./pages/home/NewsList";
 import AddNews from "./pages/home/AddNews";
+import Rfc from "./pages/pdf-area/Rfc";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/edit/:id" element={<EditBlog />} />
             <Route path="/news" element={<NewsList />} />
             <Route path="/addNews" element={<AddNews />} />
+            <Route path="/rfc2350" element={<Rfc />} />
           </Routes>
         </section>
       </main>

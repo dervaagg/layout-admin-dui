@@ -36,10 +36,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+html,
 body,
 #root,
 .app,
@@ -55,27 +52,27 @@ body,
 }
 
 .sidebar {
-  color: #fff;
+
   position: flex;
-  height: 100vh;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  padding: 5px;
-}
-
-.logo {
-  margin-top: 4rem;
-  margin-bottom: -1rem;
+  padding: 1px;
+  margin-top: 1rem;
+  margin-bottom: -2rem;
 }
 
 .img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   display: flex;
   object-fit: cover;
   border-radius: 50%;
@@ -101,10 +98,6 @@ body,
   font-size: 1rem;
 }
 
-.toggle {
-  margin-left: 15px;
-}
-
 .button-sun {
   color: #fff;
 }
@@ -117,3 +110,19 @@ body,
   margin-top: 3rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 2);
 }
+
+.container-rfc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+

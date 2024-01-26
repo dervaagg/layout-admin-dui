@@ -11,6 +11,7 @@ import {
   FileOutlined,
 } from "@ant-design/icons";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const ListMenu = ({ darkTheme }) => {
   return (
@@ -20,6 +21,7 @@ const ListMenu = ({ darkTheme }) => {
       className="menu-bar"
     >
       <Menu.Item key="home" icon={<HomeOutlined />}>
+        <Link to="/" />
         Home
       </Menu.Item>
       <Menu.Item key="profil" icon={<UserOutlined />}>
@@ -37,9 +39,11 @@ const ListMenu = ({ darkTheme }) => {
         </Menu.Item>
       </Menu.SubMenu>
       <Menu.Item key="berita" icon={<ReadOutlined />}>
+        <Link to="/news" />
         Berita
       </Menu.Item>
       <Menu.Item key="rfc" icon={<FilePdfOutlined />}>
+        <Link to="/rfc2350" />
         RFC 2350
       </Menu.Item>
       <Menu.Item key="panduan" icon={<FileSearchOutlined />}>
